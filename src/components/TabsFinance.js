@@ -3,7 +3,7 @@ import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
-import TableFinance from "./InsuranceDetails";
+import InsuranceDetails from "./InsuranceDetails";
 import { useState } from "react";
 
 export default function DisabledTabs({ financeList }) {
@@ -31,7 +31,7 @@ export default function DisabledTabs({ financeList }) {
       {financeList.data.result.map((insurance) => {
         return (
           <TabPanel value={insurance.type} key={insurance.type}>
-            <TableFinance insuranceDetails={insurance.arr} />
+            <InsuranceDetails insuranceDetails={insurance.arr} />
           </TabPanel>
         );
       })}
